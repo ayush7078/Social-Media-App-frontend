@@ -90,6 +90,6 @@ Uses a badge to indicate the number of notifications.
 How to Run
 Start the backend server first (see backend README).
 
-Start the frontend server:
+- Start the frontend server:
 npm start
 Open your browser and navigate to http://localhost:3000.
