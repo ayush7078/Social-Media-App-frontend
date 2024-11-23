@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Input, Button, List, Typography, notification } from 'antd';
 import { SendOutlined } from '@ant-design/icons';
-import socket from '../utils/socket'; // Assuming socket.js is set up for socket connection
-import './Chat.css'; // Optional CSS for styling
+import socket from '../utils/socket'; // socket.js is set up for socket connection
+import './Chat.css'; 
 
 const { Text } = Typography;
 
