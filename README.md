@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+## Frontend - Real-Time Chat and Notifications App
+This is the frontend of a real-time chat and notification application built using React and Ant Design. It communicates with the backend server via Socket.io for public chat messages and live notifications.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Table of Contents
+1. Features
+2. Technologies Used
+3. Getting Started
+4. Folder Structure
+5. Key Components
+6. How to Run
 
-## Available Scripts
 
-In the project directory, you can run:
+# Features
+- Public Chat:
 
-### `npm start`
+1. Send and receive real-time public messages.
+2. Display chat messages in a scrollable list.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Live Notifications:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Notifications for new comments displayed in the top-right header area.
+2. Badge counter to indicate the number of unseen notifications.
 
-### `npm test`
+- User-Friendly UI:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Built with Ant Design for modern and responsive components.
 
-### `npm run build`
+# Technologies Used
+- React.js: Framework for building the frontend.
+- Ant Design: Component library for UI design.
+- Socket.io: For real-time communication.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Getting Started
+- Prerequisites
+Ensure you have the following installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Node.js (v14 or above)
+2. npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Setup
+1. Clone the repository:
 
-### `npm run eject`
+git clone https://github.com/ayush7078/Social-Media-App-frontend.git
+cd Social-Media-App-frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Start the application:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm start
 
-## Learn More
+The application will be available at http://localhost:3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Folder Structure
+- frontend/
+- ├── public/
+- ├── src/
+- │   ├── components/
+- │   │   ├── Chat.js           # Chat component for public messages
+- │   │   └── Chat.css              # Styling for chat component
+- │   │   ├── Header.js         # Header component for notifications
+- │   │   ├── CommentNotification.js  # Notification popup utility
+- │   ├── utils/
+- │   │   └── socket.js         # Socket connection setup
+- │   ├── App.js                # Main App component
+- │   ├── index.js              # Entry point
+- ├── .env
+- ├── package.json
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+# Key Components
+1. Chat Component (Chat.js)
+This component handles the public chat functionality:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Listens for chatMessage events from the backend.
+Sends public messages to the backend via Socket.io.
+Displays chat messages in a scrollable list.
 
-### Analyzing the Bundle Size
+2. Header Component (Header.js)
+This component provides the live notifications functionality:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Listens for newComment events from the backend.
+Displays notifications in a dropdown menu.
+Uses a badge to indicate the number of notifications.
 
-### Making a Progressive Web App
+3. Socket Utility (socket.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+How to Run
+Start the backend server first (see backend README).
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Start the frontend server:
+npm start
+Open your browser and navigate to http://localhost:3000.
